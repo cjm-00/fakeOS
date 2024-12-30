@@ -1,0 +1,61 @@
+@use "../partials/colors" as color;
+
+#menu {
+  //   height: 800px;
+  width: 300px;
+  background-color: color.$windows-grey;
+  border-left: 3px color.$trim-white solid;
+  border-top: 3px color.$trim-white solid;
+  box-shadow: color.$shadow 3px 3px;
+  z-index: 4;
+  position: absolute;
+  bottom: 38px;
+  left: 4px;
+  display: flex;
+
+  #gradient {
+    writing-mode: vertical-lr;
+    transform: scale(-1);
+    color: color.$menu-white;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    background: linear-gradient(color.$gradient-cyan, color.$gradient-blue);
+    padding: 8px;
+  }
+
+  #items-box {
+    // border: 2px solid green;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+
+    .menu-item {
+      padding-left: 8px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      padding-right: 8px;
+      font-family: sans-serif;
+      font-size: 0.9em;
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+
+      &:hover {
+        background-color: color.$shadow;
+      }
+      .item-group {
+        display: flex;
+        // border: 2px solid green;
+        gap: 8px;
+        margin: none;
+      }
+    }
+  }
+}
+
+#menu.menu--closed {
+  height: 0px;
+}

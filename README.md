@@ -19,3 +19,15 @@
 - Planned Lyric app
 - Created Lyric icon
 - Resized all elements
+
+Lyrics API - https://github.com/NTag/lyrics.ovh (GNU General Public License v3.0)
+
+## 01.01.25
+
+- Creating modal
+- Styling modal
+- Linking API
+- Troubleshooting API data not showing
+- Fixed modal showing by default by changing display from 'flex' to 'none'
+- Implement clock keeping time after load
+- Implement menu open-close toggle

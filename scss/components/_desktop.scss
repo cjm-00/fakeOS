@@ -3,9 +3,11 @@
 #desktop {
   display: flex;
   .icon {
-    padding: 50px;
-    font-family: sans-serif;
+    padding: 10px;
+    font-family: "windows regular";
     text-align: center;
+    border: none;
+
     p {
       margin: 0px;
       color: color.$menu-white;
@@ -15,12 +17,10 @@
       padding: 10px;
     }
   }
-}
-
-#lyricIcon {
-  border: none;
-}
-
-#lyricIcon--clicked {
-  border: 1px grey solid;
+  .icon--clicked {
+    img {
+      border: 1px grey solid;
+      padding: 10px;
+    }
+  }
 }

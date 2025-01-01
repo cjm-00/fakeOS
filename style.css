@@ -22,7 +22,7 @@
 #clock {
   border-bottom: 2px rgb(235, 235, 235) solid;
   border-right: 2px rgb(235, 235, 235) solid;
-  font-family: sans-serif;
+  font-family: "windows regular";
   box-shadow: inset rgb(158, 149, 149) 2px 2px;
   margin: 5px;
   padding: 5px;
@@ -46,7 +46,7 @@
   display: flex;
   font-size: 1em;
   font-weight: 700;
-  font-family: sans-serif;
+  font-family: "windows regular";
   gap: 2px;
   background-color: #bdbebd;
 }
@@ -61,7 +61,11 @@
   border-left: none;
 }
 
-#menu {
+@font-face {
+  font-family: "windows regular";
+  src: url(./assets/Windows\ Regular.ttf);
+}
+.menu {
   width: 300px;
   background-color: #bdbebd;
   border-left: 3px rgb(235, 235, 235) solid;
@@ -71,56 +75,184 @@
   position: absolute;
   bottom: 38px;
   left: 4px;
-  display: flex;
+  display: none;
 }
-#menu #gradient {
+.menu #gradient {
   writing-mode: vertical-lr;
   transform: scale(-1);
   color: #f6f9fc;
-  font-family: sans-serif;
-  font-size: 1.2em;
-  font-weight: 700;
+  font-family: "windows regular";
+  font-size: 1.5em;
+  font-weight: 500;
   background: linear-gradient(#1082cf, #040281);
   padding: 8px;
 }
-#menu #items-box {
+.menu #items-box {
   width: 400px;
   display: flex;
   flex-direction: column;
   padding-top: 5px;
 }
-#menu #items-box .menu-item {
+.menu #items-box .menu-item {
   padding-left: 8px;
   padding-top: 2px;
   padding-bottom: 2px;
   padding-right: 8px;
-  font-family: sans-serif;
+  font-family: "windows regular";
   font-size: 0.9em;
   align-items: center;
   display: flex;
   justify-content: space-between;
   font-weight: 500;
 }
-#menu #items-box .menu-item:hover {
+.menu #items-box .menu-item:hover {
   background-color: rgb(158, 149, 149);
 }
-#menu #items-box .menu-item .item-group {
+.menu #items-box .menu-item .item-group {
   display: flex;
   gap: 8px;
   margin: none;
 }
 
-#menu.menu--closed {
-  height: 0px;
+.menu--open {
+  display: flex;
+}
+
+#programs-menu {
+  width: 200px;
+  background-color: #bdbebd;
+  border-left: 3px rgb(235, 235, 235) solid;
+  border-top: 3px rgb(235, 235, 235) solid;
+  box-shadow: rgb(158, 149, 149) 3px 3px;
+  z-index: 5;
+  position: absolute;
+  bottom: 320px;
+  left: 290px;
+  display: none;
+  align-items: center;
+  padding-top: 5px;
+}
+#programs-menu img {
+  width: 35px;
+  height: 35px;
+}
+
+#programs-menu--open {
+  display: flex;
+}
+
+#lyric-modal {
+  width: 70%;
+  height: 70%;
+  background-color: #bdbebd;
+  border: none;
+  flex-direction: column;
+  padding: 0%;
+  border-bottom: none;
+  border-right: none;
+  box-shadow: rgb(158, 149, 149) 2px 2px;
+  border-left: 2px rgb(235, 235, 235) solid;
+  border-top: 2px rgb(235, 235, 235) solid;
+}
+#lyric-modal::backdrop {
+  display: none;
+}
+#lyric-modal #lyric-window-banner {
+  background: linear-gradient(to right, #040281, #1082cf);
+  height: 35px;
+  color: #f6f9fc;
+  font-family: "windows regular";
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 3px;
+  justify-content: space-between;
+}
+#lyric-modal #lyric-window-banner #lyricClose {
+  height: 25px;
+  width: 25px;
+  font-size: 1.4em;
+  background-color: #bdbebd;
+  font-weight: 400;
+  font-family: "windows regular";
+  border-bottom: none;
+  border-right: none;
+  box-shadow: rgb(158, 149, 149) 2px 2px;
+  border-left: 2px rgb(235, 235, 235) solid;
+  border-top: 2px rgb(235, 235, 235) solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#lyric-modal #lyricForm {
+  font-family: "windows regular";
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+#lyric-modal #lyricForm #artist {
+  border-bottom: 2px rgb(235, 235, 235) solid;
+  border-right: 2px rgb(235, 235, 235) solid;
+  border-top: none;
+  border-left: none;
+  box-shadow: inset rgb(158, 149, 149) 2px 2px;
+  margin-bottom: 10px;
+  width: 350px;
+}
+#lyric-modal #lyricForm #title {
+  border-bottom: 2px rgb(235, 235, 235) solid;
+  border-right: 2px rgb(235, 235, 235) solid;
+  box-shadow: inset rgb(158, 149, 149) 2px 2px;
+  border-top: none;
+  border-left: none;
+  margin-bottom: 10px;
+  width: 350px;
+}
+#lyric-modal #lyricForm #submitLyric {
+  width: 150px;
+  height: 45px;
+  align-self: center;
+  background-color: #bdbebd;
+  font-family: "windows regular";
+  border-bottom: none;
+  border-right: none;
+  box-shadow: rgb(158, 149, 149) 2px 2px;
+  border-left: 2px rgb(235, 235, 235) solid;
+  border-top: 2px rgb(235, 235, 235) solid;
+}
+#lyric-modal #lyricForm #submitLyric:hover {
+  border-bottom: 2px rgb(235, 235, 235) solid;
+  border-right: 2px rgb(235, 235, 235) solid;
+  box-shadow: inset rgb(158, 149, 149) 2px 2px;
+  border-top: none;
+  border-left: none;
+}
+#lyric-modal #lyricForm #lyricText {
+  background-color: #f6f9fc;
+  padding: 5px;
+  text-align: left;
+  margin-top: 160px;
+  height: 60%;
+  width: 93%;
+  position: absolute;
+  border-bottom: 2px rgb(235, 235, 235) solid;
+  border-right: 2px rgb(235, 235, 235) solid;
+  box-shadow: inset rgb(158, 149, 149) 2px 2px;
+  overflow-y: scroll;
 }
 
 #desktop {
   display: flex;
 }
 #desktop .icon {
-  padding: 50px;
-  font-family: sans-serif;
+  padding: 10px;
+  font-family: "windows regular";
   text-align: center;
+  border: none;
 }
 #desktop .icon p {
   margin: 0px;
@@ -129,13 +261,9 @@
 #desktop .icon img {
   padding: 10px;
 }
-
-#lyricIcon {
-  border: none;
-}
-
-#lyricIcon--clicked {
+#desktop .icon--clicked img {
   border: 1px grey solid;
+  padding: 10px;
 }
 
 body {

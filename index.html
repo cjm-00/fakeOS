@@ -15,16 +15,24 @@
         <p>Lyric</p>
       </div>
     </div>
-    <div id="menu">
+    <div class="menu">
       <div id="gradient">Windows 98</div>
 
       <div id="items-box">
-        <div class="menu-item">
+        <div class="menu-item" id="programs-item">
           <div class="item-group">
             <img src="./assets/programs.ico" />
             <p>Programs</p>
           </div>
           <p>▶</p>
+        </div>
+        <div id="programs-menu">
+          <div class="programs-menu" id="lyric-menu">
+            <div class="item-group">
+              <img src="./assets/lyrics.ico" />
+              <p>Lyric</p>
+            </div>
+          </div>
         </div>
         <div class="menu-item">
           <div class="item-group">
@@ -73,5 +81,22 @@
         <p></p>
       </div>
     </div>
+
+    <dialog id="lyric-modal" class="app">
+      <div id="lyric-window-banner">
+        Lyric - Song Lyric Search Tool
+        <button id="lyricClose">✖</button>
+      </div>
+      <form id="lyricForm">
+        <label for="artist">Artist:</label>
+        <input type="text" id="artist" name="artist" />
+
+        <label for="title">Song Title:</label>
+        <input type="text" id="title" name="title" />
+
+        <button id="submitLyric" type="submit">Get Lyrics</button>
+        <pre id="lyricText">Lyrics Appear Here</pre>
+      </form>
+    </dialog>
   </body>
 </html>

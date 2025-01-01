@@ -16,7 +16,7 @@
 #clock {
   border-bottom: 2px color.$trim-white solid;
   border-right: 2px color.$trim-white solid;
-  font-family: sans-serif;
+  font-family: "windows regular";
 
   box-shadow: inset color.$shadow 2px 2px;
   margin: 5px;
@@ -41,7 +41,7 @@
   display: flex;
   font-size: 1em;
   font-weight: 700;
-  font-family: sans-serif;
+  font-family: "windows regular";
   gap: 2px;
   background-color: color.$windows-grey;
   #logo {

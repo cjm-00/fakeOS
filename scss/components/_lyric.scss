@@ -1,1 +1,120 @@
 @use "../partials/colors" as color;
+
+#lyric-modal {
+  width: 70%;
+  height: 70%;
+
+  background-color: color.$windows-grey;
+  border: none;
+  //   display: none;
+  flex-direction: column;
+  padding: 0%;
+  //   overflow-y: scroll;
+  border-bottom: none;
+  border-right: none;
+  box-shadow: color.$shadow 2px 2px;
+  border-left: 2px color.$trim-white solid;
+  border-top: 2px color.$trim-white solid;
+
+  &::backdrop {
+    display: none;
+  }
+
+  #lyric-window-banner {
+    background: linear-gradient(
+      to right,
+      color.$gradient-blue,
+      color.$gradient-cyan
+    );
+    height: 35px;
+    color: color.$menu-white;
+    font-family: "windows regular";
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 3px;
+    justify-content: space-between;
+    #lyricClose {
+      height: 25px;
+      width: 25px;
+      font-size: 1.4em;
+      background-color: color.$windows-grey;
+      font-weight: 400;
+      font-family: "windows regular";
+      border-bottom: none;
+      border-right: none;
+      box-shadow: color.$shadow 2px 2px;
+      border-left: 2px color.$trim-white solid;
+      border-top: 2px color.$trim-white solid;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  #lyricForm {
+    font-family: "windows regular";
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+
+    #artist {
+      border-bottom: 2px color.$trim-white solid;
+      border-right: 2px color.$trim-white solid;
+      border-top: none;
+      border-left: none;
+      box-shadow: inset color.$shadow 2px 2px;
+      margin-bottom: 10px;
+      width: 350px;
+    }
+
+    #title {
+      border-bottom: 2px color.$trim-white solid;
+      border-right: 2px color.$trim-white solid;
+      box-shadow: inset color.$shadow 2px 2px;
+      border-top: none;
+      border-left: none;
+      margin-bottom: 10px;
+      width: 350px;
+    }
+
+    #submitLyric {
+      width: 150px;
+      height: 45px;
+      align-self: center;
+      background-color: color.$windows-grey;
+      font-family: "windows regular";
+      border-bottom: none;
+      border-right: none;
+      box-shadow: color.$shadow 2px 2px;
+      border-left: 2px color.$trim-white solid;
+      border-top: 2px color.$trim-white solid;
+      &:hover {
+        border-bottom: 2px color.$trim-white solid;
+        border-right: 2px color.$trim-white solid;
+        box-shadow: inset color.$shadow 2px 2px;
+        border-top: none;
+        border-left: none;
+      }
+    }
+
+    #lyricText {
+      background-color: color.$menu-white;
+      padding: 5px;
+      text-align: left;
+      margin-top: 160px;
+
+      //   height: 440px;
+      height: 60%;
+      width: 93%;
+      position: absolute;
+      border-bottom: 2px color.$trim-white solid;
+      border-right: 2px color.$trim-white solid;
+      box-shadow: inset color.$shadow 2px 2px;
+      overflow-y: scroll;
+    }
+  }
+}

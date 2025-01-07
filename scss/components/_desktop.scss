@@ -1,0 +1,25 @@
+@use "../partials/colors" as color;
+
+#desktop {
+  display: flex;
+  .icon {
+    padding: 10px;
+    font-family: "windows regular";
+    text-align: center;
+    border: none;
+
+    p {
+      margin: 0px;
+      color: color.$menu-white;
+    }
+    img {
+      padding: 10px;
+    }
+  }
+  .icon--clicked {
+    img {
+      border: 1px grey solid;
+      padding: 10px;
+    }
+  }
+}

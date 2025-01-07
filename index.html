@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" type="module" defer></script>
+    <script src="./clock.js" type="module" defer></script>
+    <script src="./lyric.js" type="module" defer></script>
+
+    <title>fakeOS</title>
+    <link rel="icon" type="image/x-icon" href="./assets/logo.png" />
+  </head>
+  <body>
+    <img src="./assets/windows-98.webp" id="wallpaper" alt="wallpaper" />
+    <div id="desktop">
+      <div class="icon" id="lyric-icon">
+        <img src="./assets/lyrics.ico" />
+        <p>Lyric</p>
+      </div>
+    </div>
+    <div class="menu">
+      <div id="gradient">Windows 98</div>
+
+      <div id="items-box">
+        <div class="menu-item" id="programs-item">
+          <div class="item-group">
+            <img src="./assets/programs.ico" />
+            <p>Programs</p>
+          </div>
+          <p>▶</p>
+        </div>
+        <div id="programs-menu">
+          <div class="programs-menu" id="lyric-menu">
+            <div class="item-group">
+              <img src="./assets/lyrics.ico" />
+              <p>Lyric</p>
+            </div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-group">
+            <img src="./assets/settings.ico" />
+            <p>Settings</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-group">
+            <img src="./assets/find.ico" />
+            <p>Find</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-group">
+            <img src="./assets/help.ico" />
+            <p>Help</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-group">
+            <img src="./assets/run.ico" />
+            <p>Run</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-group">
+            <img src="./assets/logoff.ico" />
+            <p>Log off</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-group">
+            <img src="./assets/shutdown.ico" />
+            <p>Shutdown</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="taskbar">
+      <button id="startBtn">
+        <img id="logo" src="./assets/logo.png" />Start
+      </button>
+
+      <div id="clock">
+        <p></p>
+      </div>
+    </div>
+
+    <dialog id="lyric-modal" class="app">
+      <div id="lyric-window-banner">
+        Lyric - Song Lyric Search Tool
+        <button id="lyric-close">✖</button>
+      </div>
+      <form id="lyric-form">
+        <label for="artist">Artist:</label>
+        <input type="text" id="artist" name="artist" />
+
+        <label for="title">Song Title:</label>
+        <input type="text" id="title" name="title" />
+
+        <button id="submit-lyric" type="submit">Get Lyrics</button>
+        <pre id="lyric-text">Lyrics Appear Here</pre>
+      </form>
+    </dialog>
+  </body>
+</html>

@@ -1,0 +1,298 @@
+#wallpaper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  margin: auto;
+}
+
+#taskbar {
+  width: 100vw;
+  height: 40px;
+  padding-top: 1.5px;
+  background-color: #bdbebd;
+  position: absolute;
+  bottom: 0px;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: inset rgb(235, 235, 235) 0px 3px;
+}
+
+#clock {
+  border-bottom: 2px rgb(235, 235, 235) solid;
+  border-right: 2px rgb(235, 235, 235) solid;
+  font-family: "windows regular";
+  box-shadow: inset rgb(158, 149, 149) 2px 2px;
+  margin: 5px;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+#startBtn {
+  border-left: 2px rgb(235, 235, 235) solid;
+  border-top: 2px rgb(235, 235, 235) solid;
+  border-bottom: none;
+  border-right: none;
+  box-shadow: rgb(158, 149, 149) 2px 2px;
+  margin: 5px;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 1em;
+  font-weight: 700;
+  font-family: "windows regular";
+  gap: 2px;
+  background-color: #bdbebd;
+}
+#startBtn #logo {
+  width: 25px;
+}
+#startBtn:hover {
+  border-bottom: 2px rgb(235, 235, 235) solid;
+  border-right: 2px rgb(235, 235, 235) solid;
+  box-shadow: inset rgb(158, 149, 149) 2px 2px;
+  border-top: none;
+  border-left: none;
+}
+
+@font-face {
+  font-family: "windows regular";
+  src: url(./assets/Windows\ Regular.ttf);
+}
+.menu {
+  width: 300px;
+  background-color: #bdbebd;
+  border-left: 3px rgb(235, 235, 235) solid;
+  border-top: 3px rgb(235, 235, 235) solid;
+  box-shadow: rgb(158, 149, 149) 3px 3px;
+  z-index: 4;
+  position: absolute;
+  bottom: 38px;
+  left: 4px;
+  display: none;
+}
+.menu #gradient {
+  writing-mode: vertical-lr;
+  transform: scale(-1);
+  color: #f6f9fc;
+  font-family: "windows regular";
+  font-size: 1.5em;
+  font-weight: 500;
+  background: linear-gradient(#1082cf, #040281);
+  padding: 8px;
+}
+.menu #items-box {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+}
+.menu #items-box .menu-item {
+  padding-left: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 8px;
+  font-family: "windows regular";
+  font-size: 0.9em;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+.menu #items-box .menu-item:hover {
+  background-color: rgb(158, 149, 149);
+}
+.menu #items-box .menu-item .item-group {
+  display: flex;
+  gap: 8px;
+  margin: none;
+}
+
+.menu--open {
+  display: flex;
+}
+
+#programs-menu {
+  width: 200px;
+  background-color: #bdbebd;
+  border-left: 3px rgb(235, 235, 235) solid;
+  border-top: 3px rgb(235, 235, 235) solid;
+  box-shadow: rgb(158, 149, 149) 3px 3px;
+  z-index: 5;
+  position: absolute;
+  bottom: 320px;
+  left: 290px;
+  display: none;
+  align-items: center;
+  padding-top: 5px;
+}
+#programs-menu img {
+  width: 35px;
+  height: 35px;
+}
+
+#programs-menu--open {
+  display: flex;
+}
+
+#lyric-modal {
+  width: 70%;
+  height: 70%;
+  background-color: #bdbebd;
+  border: none;
+  flex-direction: column;
+  padding: 0%;
+  border-bottom: none;
+  border-right: none;
+  box-shadow: rgb(158, 149, 149) 2px 2px;
+  border-left: 2px rgb(235, 235, 235) solid;
+  border-top: 2px rgb(235, 235, 235) solid;
+}
+#lyric-modal::backdrop {
+  display: none;
+}
+#lyric-modal #lyric-window-banner {
+  background: linear-gradient(to right, #040281, #1082cf);
+  height: 35px;
+  color: #f6f9fc;
+  font-family: "windows regular";
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 3px;
+  justify-content: space-between;
+}
+#lyric-modal #lyric-window-banner #lyric-close {
+  height: 25px;
+  width: 25px;
+  font-size: 1.4em;
+  background-color: #bdbebd;
+  font-weight: 400;
+  font-family: "windows regular";
+  border-bottom: none;
+  border-right: none;
+  box-shadow: rgb(158, 149, 149) 2px 2px;
+  border-left: 2px rgb(235, 235, 235) solid;
+  border-top: 2px rgb(235, 235, 235) solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#lyric-modal #lyric-form {
+  font-family: "windows regular";
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+#lyric-modal #lyric-form #artist {
+  border-bottom: 2px rgb(235, 235, 235) solid;
+  border-right: 2px rgb(235, 235, 235) solid;
+  border-top: none;
+  border-left: none;
+  box-shadow: inset rgb(158, 149, 149) 2px 2px;
+  margin-bottom: 10px;
+  width: 350px;
+}
+#lyric-modal #lyric-form #title {
+  border-bottom: 2px rgb(235, 235, 235) solid;
+  border-right: 2px rgb(235, 235, 235) solid;
+  box-shadow: inset rgb(158, 149, 149) 2px 2px;
+  border-top: none;
+  border-left: none;
+  margin-bottom: 10px;
+  width: 350px;
+}
+#lyric-modal #lyric-form #submit-lyric {
+  width: 150px;
+  height: 45px;
+  align-self: center;
+  background-color: #bdbebd;
+  font-family: "windows regular";
+  border-bottom: none;
+  border-right: none;
+  box-shadow: rgb(158, 149, 149) 2px 2px;
+  border-left: 2px rgb(235, 235, 235) solid;
+  border-top: 2px rgb(235, 235, 235) solid;
+}
+#lyric-modal #lyric-form #submit-lyric:hover {
+  border-bottom: 2px rgb(235, 235, 235) solid;
+  border-right: 2px rgb(235, 235, 235) solid;
+  box-shadow: inset rgb(158, 149, 149) 2px 2px;
+  border-top: none;
+  border-left: none;
+}
+#lyric-modal #lyric-form #lyric-text {
+  background-color: #f6f9fc;
+  padding: 5px;
+  text-align: left;
+  margin-top: 160px;
+  height: 60%;
+  width: 93%;
+  position: absolute;
+  border-bottom: 2px rgb(235, 235, 235) solid;
+  border-right: 2px rgb(235, 235, 235) solid;
+  box-shadow: inset rgb(158, 149, 149) 2px 2px;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 25px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(211, 209, 209);
+  border-bottom: 1px rgb(235, 235, 235) solid;
+  border-right: 1px rgb(235, 235, 235) solid;
+  border-top: rgb(158, 149, 149) 2px solid;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bdbebd;
+  box-shadow: rgb(158, 149, 149) 2px 2px;
+  border-left: 2px rgb(235, 235, 235) solid;
+  border-top: 2px rgb(235, 235, 235) solid;
+}
+
+::-webkit-scrollbar-button {
+  width: 25px;
+  height: 25px;
+  background: #bdbebd;
+  color: black;
+}
+
+#desktop {
+  display: flex;
+}
+#desktop .icon {
+  padding: 10px;
+  font-family: "windows regular";
+  text-align: center;
+  border: none;
+}
+#desktop .icon p {
+  margin: 0px;
+  color: #f6f9fc;
+}
+#desktop .icon img {
+  padding: 10px;
+}
+#desktop .icon--clicked img {
+  border: 1px grey solid;
+  padding: 10px;
+}
+
+body {
+  margin: 0px;
+}
+
+/*# sourceMappingURL=style.css.map */

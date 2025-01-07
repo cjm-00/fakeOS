@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" type="module" defer></script>
+    <script src="./clock.js" type="module" defer></script>
+    <script src="./lyric.js" type="module" defer></script>
+
     <title>fakeOS</title>
+    <link rel="icon" type="image/x-icon" href="./assets/logo.png" />
   </head>
   <body>
     <img src="./assets/windows-98.webp" id="wallpaper" alt="wallpaper" />
     <div id="desktop">
-      <div class="icon" id="lyricIcon">
+      <div class="icon" id="lyric-icon">
         <img src="./assets/lyrics.ico" />
         <p>Lyric</p>
       </div>
@@ -85,17 +89,17 @@
     <dialog id="lyric-modal" class="app">
       <div id="lyric-window-banner">
         Lyric - Song Lyric Search Tool
-        <button id="lyricClose">✖</button>
+        <button id="lyric-close">✖</button>
       </div>
-      <form id="lyricForm">
+      <form id="lyric-form">
         <label for="artist">Artist:</label>
         <input type="text" id="artist" name="artist" />
 
         <label for="title">Song Title:</label>
         <input type="text" id="title" name="title" />
 
-        <button id="submitLyric" type="submit">Get Lyrics</button>
-        <pre id="lyricText">Lyrics Appear Here</pre>
+        <button id="submit-lyric" type="submit">Get Lyrics</button>
+        <pre id="lyric-text">Lyrics Appear Here</pre>
       </form>
     </dialog>
   </body>

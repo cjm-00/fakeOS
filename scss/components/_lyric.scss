@@ -3,13 +3,10 @@
 #lyric-modal {
   width: 70%;
   height: 70%;
-
   background-color: color.$windows-grey;
   border: none;
-  //   display: none;
   flex-direction: column;
   padding: 0%;
-  //   overflow-y: scroll;
   border-bottom: none;
   border-right: none;
   box-shadow: color.$shadow 2px 2px;
@@ -36,7 +33,7 @@
     padding-right: 5px;
     margin: 3px;
     justify-content: space-between;
-    #lyricClose {
+    #lyric-close {
       height: 25px;
       width: 25px;
       font-size: 1.4em;
@@ -53,7 +50,7 @@
       align-items: center;
     }
   }
-  #lyricForm {
+  #lyric-form {
     font-family: "windows regular";
     padding: 20px;
     display: flex;
@@ -81,7 +78,7 @@
       width: 350px;
     }
 
-    #submitLyric {
+    #submit-lyric {
       width: 150px;
       height: 45px;
       align-self: center;
@@ -101,13 +98,11 @@
       }
     }
 
-    #lyricText {
+    #lyric-text {
       background-color: color.$menu-white;
       padding: 5px;
       text-align: left;
       margin-top: 160px;
-
-      //   height: 440px;
       height: 60%;
       width: 93%;
       position: absolute;
@@ -117,4 +112,27 @@
       overflow-y: scroll;
     }
   }
+}
+
+::-webkit-scrollbar {
+  width: 25px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(211, 209, 209);
+  border-bottom: 1px color.$trim-white solid;
+  border-right: 1px color.$trim-white solid;
+  border-top: color.$shadow 2px solid;
+}
+::-webkit-scrollbar-thumb {
+  background: color.$windows-grey;
+  box-shadow: color.$shadow 2px 2px;
+  border-left: 2px color.$trim-white solid;
+  border-top: 2px color.$trim-white solid;
+}
+
+::-webkit-scrollbar-button {
+  width: 25px;
+  height: 25px;
+  background: color.$windows-grey;
+  color: black;
 }

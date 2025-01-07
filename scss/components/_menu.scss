@@ -2,7 +2,6 @@
 @use "../partials/fonts";
 
 .menu {
-  //   height: 800px;
   width: 300px;
   background-color: color.$windows-grey;
   border-left: 3px color.$trim-white solid;
@@ -26,7 +25,6 @@
   }
 
   #items-box {
-    // border: 2px solid green;
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -49,7 +47,6 @@
       }
       .item-group {
         display: flex;
-        // border: 2px solid green;
         gap: 8px;
         margin: none;
       }
